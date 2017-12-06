@@ -2,12 +2,12 @@ import FWCore.ParameterSet.Config as cms
 
 #isDebug = True
 isDebug = False
-#useData = False
-useData = True
+useData = False
+#useData = True
 if useData:
     met_sources_GL =  cms.vstring("slimmedMETs","slimmedMETsPuppi","slMETsCHS","slimmedMETsMuEGClean","slimmedMETsEGClean","slimmedMETsUncorrected")
 else:
-    met_sources_GL =  cms.vstring("slimmedMETs","slimmedMETsPuppi","slMETsCHS","slimmedMETsMuEGClean")
+    met_sources_GL =  cms.vstring("slimmedMETs","slimmedMETsPuppi","slMETsCHS")
 
 # minimum pt for the large-R jets (applies for all: vanilla CA8/CA15, cmstoptag, heptoptag). Also applied for the corresponding genjets.
 fatjet_ptmin = 150.0
@@ -36,8 +36,8 @@ bTagInfos = [
 process = cms.Process("USER")
 
 process.load("FWCore.MessageService.MessageLogger_cfi")
-process.MessageLogger.cerr.FwkReport.reportEvery = cms.untracked.int32(1000)
-#process.MessageLogger.cerr.FwkReport.reportEvery = cms.untracked.int32(1)
+#process.MessageLogger.cerr.FwkReport.reportEvery = cms.untracked.int32(1000)
+process.MessageLogger.cerr.FwkReport.reportEvery = cms.untracked.int32(1)
 process.options = cms.untracked.PSet( wantSummary = cms.untracked.bool(False) , allowUnscheduled = cms.untracked.bool(True) )
 #process.options = cms.untracked.PSet( wantSummary = cms.untracked.bool(True) , allowUnscheduled = cms.untracked.bool(True) )
 
@@ -58,6 +58,7 @@ if isDebug:
 process.source = cms.Source("PoolSource",
   fileNames  = cms.untracked.vstring([
             '/store/data/Run2016B/SingleElectron/MINIAOD/03Feb2017_ver2-v2/110000/028CD245-EFEA-E611-8A2B-90B11C2801E1.root'
+#            'file:/afs/desy.de/user/k/karavdia/public/JERC/PUPPI_check_2016/pickevents_miniAOD.root'
   ]),
   skipEvents = cms.untracked.uint32(0)
 )
@@ -837,6 +838,7 @@ process.MyNtuple = cms.EDFilter('NtupleWriter',
         genparticle_source = cms.InputTag("prunedPrunedGenParticles"),
         stablegenparticle_source = cms.InputTag("packedGenParticles"),
         doAllGenParticles = cms.bool(False), #set to true if you want to store all gen particles, otherwise, only prunedPrunedGenParticles are stored (see above)
+        doAllGenParticlesPythia8  = cms.bool(False), #set to true if you want to store all gen particles, otherwise, only prunedPrunedGenParticles are stored (see above)         
         doGenJets = cms.bool(not useData),
         genjet_sources = cms.vstring("slimmedGenJets","slimmedGenJetsAK8","ca15GenJets"),
         genjet_ptmin = cms.double(10.0),

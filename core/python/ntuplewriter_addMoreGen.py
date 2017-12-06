@@ -58,14 +58,18 @@ if isDebug:
 process.source = cms.Source("PoolSource",
   fileNames  = cms.untracked.vstring([
   #          '/store/data/Run2016B/SingleElectron/MINIAOD/03Feb2017_ver2-v2/110000/028CD245-EFEA-E611-8A2B-90B11C2801E1.root'
-            '/store/mc/RunIISummer16MiniAODv2/QCD_Pt_15to30_TuneCUETP8M1_13TeV_pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/70000/00BD0FD2-FCB2-E611-BA46-0025905A609A.root'
+#            '/store/mc/RunIISummer16MiniAODv2/QCD_Pt_15to30_TuneCUETP8M1_13TeV_pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/70000/00BD0FD2-FCB2-E611-BA46-0025905A609A.root'
+            '/store/mc/RunIISummer16MiniAODv2/QCD_Pt-15to7000_TuneCUETP8M1_FlatP6_13TeV_pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/80000/0A798AE7-5EBE-E611-946C-A0000420FE80.root'
   ]),
   skipEvents = cms.untracked.uint32(0)
 )
 #process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(300))
 #process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(10))
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(10000))
+#process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(100))
+#process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1000))
+#process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(10000))
 #process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(50000))
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(100000))
 
 # Grid-control changes:
 gc_maxevents = '__MAX_EVENTS__'
