@@ -36,7 +36,13 @@ bool JetPFID::operator()(const Jet & jet, const Event &) const{
     return tightID(jet);
   case  WP_TIGHT_LEPVETO:
     return tightLepVetoID(jet);
-  default:
+  case WP_LOOSE_PUPPI:
+    return loosePuppiID(jet);
+  case WP_TIGHT_PUPPI:
+    return tightPuppiID(jet);
+  case  WP_TIGHT_LEPVETO_PUPPI:
+    return tightLepVetoPuppiID(jet);
+	default:
     throw invalid_argument("invalid working point passed to CSVBTag");
   }
   return false;
@@ -83,6 +89,45 @@ bool JetPFID::tightID(const Jet & jet) const{
 }
 
 bool JetPFID::tightLepVetoID(const Jet & jet) const{
+  if(!tightID(jet))return false;
+  return jet.muonEnergyFraction() <0.8;
+}
+
+bool JetPFID::loosePuppiID(const Jet & jet) const{
+  if(fabs(jet.eta())<=2.7
+     && jet.numberOfDaughters()>1 
+     && jet.neutralHadronEnergyFraction()<0.99
+     && jet.neutralEmEnergyFraction()<0.99){
+    
+    if(fabs(jet.eta())>=2.4)
+      return true;
+      
+    if(jet.chargedEmEnergyFraction()<0.99
+       && jet.chargedHadronEnergyFraction()>0
+       && jet.chargedMultiplicity()>0)
+      return true;   
+  }
+  else if(fabs(jet.eta())>2.7){
+    return true;
+  }
+	
+  return false;
+}
+
+bool JetPFID::tightPuppiID(const Jet & jet) const{
+  if(!looseID(jet)) return false;
+  if(fabs(jet.eta())<=2.7 
+     && jet.neutralEmEnergyFraction()<0.90
+     && jet.neutralHadronEnergyFraction()<0.90){
+    return true;
+  }
+  else if(fabs(jet.eta())>2.7){
+    return true;
+  }
+	return false;
+}
+
+bool JetPFID::tightLepVetoPuppiID(const Jet & jet) const{
   if(!tightID(jet))return false;
   return jet.muonEnergyFraction() <0.8;
 }
