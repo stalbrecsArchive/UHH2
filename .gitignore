@@ -1,12 +1,8 @@
-# Put temporary objects in 'obj', (test) binaries in 'bin',
-# and other stuff (such as test root files) in tmp.
-*/obj
-*/bin
-*/tmp
-core/python/*.pyc
-core/python/__init__.py
-*.root
-*~
-*.local
-VLQToHiggsPairProd/*
-ZprimeSemiLeptonic/*
+*.pyc
+*.d
+*.so
+*.pcm
+*.csv
+
+/output/*
+/Plots/*
