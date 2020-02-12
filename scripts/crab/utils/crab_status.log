@@ -1,0 +1,71 @@
+ERROR: IOError: [Errno 13] Permission denied: '/afs/desy.de/user/a/albrechs/.crab3.23392'
+
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+	Client Version: 3.3.1904
+	Please use 'crab uploadlog' to upload the log file /nfs/dust/cms/user/albrechs/UHH2/10_2/CMSSW_10_2_10/src/UHH2/scripts/crab/crab.log to the CRAB cache.
+ERROR: IOError: [Errno 13] Permission denied: '/afs/desy.de/user/a/albrechs/.crab3.23393'
+
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+	Client Version: 3.3.1904
+	Please use 'crab uploadlog' to upload the log file /nfs/dust/cms/user/albrechs/UHH2/10_2/CMSSW_10_2_10/src/UHH2/scripts/crab/crab.log to the CRAB cache.
+ERROR: IOError: [Errno 13] Permission denied: '/afs/desy.de/user/a/albrechs/.crab3.23394'
+
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+	Client Version: 3.3.1904
+	Please use 'crab uploadlog' to upload the log file /nfs/dust/cms/user/albrechs/UHH2/10_2/CMSSW_10_2_10/src/UHH2/scripts/crab/crab.log to the CRAB cache.
+ERROR: IOError: [Errno 13] Permission denied: '/afs/desy.de/user/a/albrechs/.crab3.23400'
+
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+	Client Version: 3.3.1904
+	Please use 'crab uploadlog' to upload the log file /nfs/dust/cms/user/albrechs/UHH2/10_2/CMSSW_10_2_10/src/UHH2/scripts/crab/crab.log to the CRAB cache.
+ERROR: IOError: [Errno 13] Permission denied: '/afs/desy.de/user/a/albrechs/.crab3.23402'
+
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+	Client Version: 3.3.1904
+	Please use 'crab uploadlog' to upload the log file /nfs/dust/cms/user/albrechs/UHH2/10_2/CMSSW_10_2_10/src/UHH2/scripts/crab/crab.log to the CRAB cache.
+ERROR: IOError: [Errno 13] Permission denied: '/afs/desy.de/user/a/albrechs/.crab3.23403'
+
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+	Client Version: 3.3.1904
+	Please use 'crab uploadlog' to upload the log file /nfs/dust/cms/user/albrechs/UHH2/10_2/CMSSW_10_2_10/src/UHH2/scripts/crab/crab.log to the CRAB cache.
+[?1034h['./mcrab.py']
+
+
+tasks: ['crab_Test/crab_JetHT_2016B_ver2_v2', 'crab_Test/crab_JetHT_2016C_v1', 'crab_Test/crab_JetHT_2016D_v1', 'crab_Test/crab_JetHT_2016G_v1', 'crab_Test/crab_JetHT_2016H_v1', 'crab_Test/crab_JetHT_2017B_v1']
+command: status
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------crab_JetHT_2016B_ver2_v2------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+crab status -d crab_Test/crab_JetHT_2016B_ver2_v2
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------crab_JetHT_2016C_v1------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
+crab status -d crab_Test/crab_JetHT_2016C_v1
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------crab_JetHT_2016D_v1------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
+crab status -d crab_Test/crab_JetHT_2016D_v1
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------crab_JetHT_2016G_v1------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
+crab status -d crab_Test/crab_JetHT_2016G_v1
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------crab_JetHT_2016H_v1------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
+crab status -d crab_Test/crab_JetHT_2016H_v1
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------crab_JetHT_2017B_v1------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
+crab status -d crab_Test/crab_JetHT_2017B_v1
+
+
